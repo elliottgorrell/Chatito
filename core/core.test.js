@@ -434,3 +434,23 @@ test("test passing optional alias to two entities with opt and non opt works fin
     expect(error).toBeNull();
     expect(result).toMatchSnapshot();
 });
+
+test("test readme example with watson nlu", () => {
+    let error = null;
+    let result = null;
+    const input = `
+%[lightChange]
+    Hey Bot turn the @[lights] @[switch]
+@[switch]
+    off
+    on
+@[lights]
+    lights
+    luces
+`;
+    try {
+        result = generator.datasetFromString(input, "watson");
+    } catch (e) { error = e; }
+    expect(error).toBeNull();
+    expect(result).toMatchSnapshot();
+});

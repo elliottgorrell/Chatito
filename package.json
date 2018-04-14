@@ -1,6 +1,6 @@
 {
   "name": "chatito",
-  "version": "1.2.2",
+  "version": "1.3.2",
   "description": "Generate training datasets for slot filling chatbots in a breeze using a simple DSL",
   "bin": {
     "chatito": "./bin/chatito.js"

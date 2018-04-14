@@ -1251,3 +1251,29 @@ exports[`test switch off example for argument with one value 1`] = `
   }
 }"
 `;
+
+exports[`test readme example with watson nlu 1`] = `
+Object {
+  "intents": Array [
+    Object {
+      "description": null,
+      "examples": Array [
+        Object {
+          "text": "Hey Bot turn the lights off",
+        },
+        Object {
+          "text": "Hey Bot turn the lights on",
+        },
+        Object {
+          "text": "Hey Bot turn the luces off",
+        },
+        Object {
+          "text": "Hey Bot turn the luces on",
+        },
+      ],
+      "intent": "lightChange",
+    },
+  ],
+  "name": "TestProject",
+}
+`;

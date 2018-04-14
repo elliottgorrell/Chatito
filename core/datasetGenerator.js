@@ -1,6 +1,7 @@
 const chatito = require("./chatito");
 const rasaGenerator = require("./rasaGenerator");
 const snipsGenerator = require("./snipsGenerator");
+const watsonGenerator = require("./watsonGenerator");
 const utils = require("./utils");
 
 const OPERATOR_DEFS = {
@@ -9,7 +10,7 @@ const OPERATOR_DEFS = {
     ALIAS_DEF_KEY: "AliasDefinition",
 };
 const INNER_OPERATORS = { ALIAS: "Alias", TEXT: "Text", ARGUMENT: "Argument" };
-const DATASET_ADAPTERS = { rasa: rasaGenerator.adapter, snips: snipsGenerator.adapter };
+const DATASET_ADAPTERS = { rasa: rasaGenerator.adapter, snips: snipsGenerator.adapter, watson: watsonGenerator.adapter };
 
 const astFromString = str => chatito.parse(str);
 
@@ -174,4 +175,5 @@ module.exports = {
     datasetFromString,
     rasaGenerator,
     snipsGenerator,
+    watsonGenerator
 };
